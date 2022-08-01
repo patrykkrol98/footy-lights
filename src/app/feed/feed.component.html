@@ -1,0 +1,17 @@
+<div *ngFor="let highlight of $highlights | async | slice: 0:offset">
+  {{ highlight.title }}
+  <img
+    *ngIf="!highlight.visible; else player"
+    (click)="highlight.visible = !highlight.visible"
+    [src]="highlight.thumbnail"
+    style="width: 640px; height: 390px"
+  />
+  <ng-template #player>
+    <iframe
+      frameborder="0"
+      width="640"
+      height="390"
+      [src]="getIframeSrc(highlight.videos[0].embed)"
+    ></iframe>
+  </ng-template>
+</div>
