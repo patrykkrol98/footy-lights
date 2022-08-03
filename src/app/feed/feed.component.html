@@ -1,17 +1,32 @@
-<div *ngFor="let highlight of $highlights | async | slice: 0:offset">
-  {{ highlight.title }}
-  <img
-    *ngIf="!highlight.visible; else player"
-    (click)="highlight.visible = !highlight.visible"
-    [src]="highlight.thumbnail"
-    style="width: 640px; height: 390px"
-  />
-  <ng-template #player>
-    <iframe
-      frameborder="0"
-      width="640"
-      height="390"
-      [src]="getIframeSrc(highlight.videos[0].embed)"
-    ></iframe>
-  </ng-template>
+<div class="feed-container">
+  <div *ngFor="let highlight of $highlights | async | slice: 0:offset">
+    <mat-card class="highlight-card">
+      <mat-card-header>
+          <mat-card-title class="feed-card-title">{{ highlight.title }}</mat-card-title>
+          <mat-card-title-group>
+            <mat-card-subtitle>
+              <mat-icon fontIcon="access_time" ></mat-icon>
+              {{ highlight.date | date }}
+            </mat-card-subtitle>
+            <mat-card-subtitle>{{ highlight.competition }}</mat-card-subtitle>
+          </mat-card-title-group>
+      </mat-card-header>
+      <div class="player-container">
+        <img
+          class="card-image"
+          at-card-image
+          *ngIf="!highlight.visible; else player"
+          (click)="highlight.visible = !highlight.visible"
+          [src]="highlight.thumbnail"
+        />
+      </div>
+    </mat-card>
+    <ng-template #player>
+      <iframe
+        class="card-player"
+        frameborder="0"
+        [src]="getIframeSrc(highlight.videos[0].embed)"
+      ></iframe>
+    </ng-template>
+  </div>
 </div>
