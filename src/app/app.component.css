@@ -1,5 +1,24 @@
-mat-toolbar{
-    position: sticky;
-    position: -webkit-sticky;
+.toolbar {
+    position: fixed;
     top: 0;
+    z-index: 1;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    -ms-border-radius: 0 0 8px 8px;
+    -o-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
 }
+
+.logo{
+    margin: auto;
+}
+
+.content {
+    margin-top: 64px;
+}
+
+@media screen and (max-width: 599px) {
+    .content {
+        margin-top: 56px;
+    }
+  }
