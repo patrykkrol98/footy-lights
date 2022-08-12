@@ -1,0 +1,41 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<mat-card *ngIf="!isLoading">
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <p>
+        <mat-form-field>
+          <input
+            id="email" 
+            type="text"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field>
+          <input
+            id="password" 
+            type="password"
+            autocomplete="on"
+            matInput
+            placeholder="Password"
+            formControlName="password"
+          />
+        </mat-form-field>
+      </p>
+
+      <div class="buttons">
+        <button type="button" (click)="submit()" [disabled]="!loginForm.valid" mat-raised-button color="primary">
+          {{ isLoginMode ? "Login" : "Sign Up" }}
+        </button>
+        <button type="button" (click)="switchMode()" mat-stroked-button>
+          Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
