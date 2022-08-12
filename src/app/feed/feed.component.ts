@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { IHighlight } from '../highlight';
-import { HighlightService } from '../highlight.service';
+import { HighlightService } from './highlight.service';
 
 @Component({
   selector: 'app-feed',
