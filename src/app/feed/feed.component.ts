@@ -1,5 +1,4 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { IHighlight } from '../highlight';
 import { HighlightService } from './highlight.service';
@@ -13,21 +12,16 @@ export class FeedComponent implements OnInit {
   $highlights!: Observable<IHighlight[]>;
   offset: number = 5;
 
-  constructor(private highlightService: HighlightService, private sanitizer: DomSanitizer) { }
+  constructor(private highlightService: HighlightService) { }
 
   ngOnInit(): void {
     this.$highlights = this.highlightService.getHighlights();
   }
 
-  sanitizeVideoUrl(url: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
-
-  getIframeSrc(iframeString: string) {
+  getVideoUrl(element: string){
     const div = document.createElement('div')
-    div.innerHTML = iframeString
-    let url = div.querySelector('iframe')
-    return this.sanitizeVideoUrl(url!.src)
+    div.innerHTML = element
+    return div.querySelector('iframe')?.src ?? ''
   }
 
   @HostListener("window:scroll", ["$event"])

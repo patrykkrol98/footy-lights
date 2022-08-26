@@ -9,6 +9,7 @@ import { FeedComponent } from './feed/feed.component';
 import { MaterialModule } from './material/material.module';
 import { AuthComponent } from './auth/auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SanitizeUrlPipe } from './sanitize-url.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PathNotFoundComponent,
     FeedComponent,
     AuthComponent,
+    SanitizeUrlPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 <div class="feed-container">
-  <div *ngFor="let highlight of $highlights | async | slice: 0:offset">
+  <div *ngFor="let highlight of $highlights| async | slice: 0:offset">
     <mat-card class="highlight-card">
       <mat-card-header>
           <mat-card-title class="feed-card-title">{{ highlight.title }}</mat-card-title>
@@ -24,8 +24,7 @@
     <ng-template #player>
       <iframe
         class="card-player"
-        frameborder="0"
-        [src]="getIframeSrc(highlight.videos[0].embed)"
+        [src]="getVideoUrl(highlight.videos[0].embed) | sanitizeUrl"
       ></iframe>
     </ng-template>
   </div>
