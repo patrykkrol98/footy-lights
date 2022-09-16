@@ -1,0 +1,17 @@
+.toolbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    -ms-border-radius: 0 0 8px 8px;
+    -o-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+}
+
+.icon {
+    cursor: pointer;
+    margin-left: 16px;
+}

@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="toolbar">
+    <div class="logo">
+    <img style="max-width: 100%" src="assets/logo.png">
+    </div>
+    <div class="icons">
+      <mat-icon matTooltip="Highlights" routerLink="/feed" fontIcon="ondemand_video" class="icon"></mat-icon>
+      <mat-icon matTooltip="Results" routerLink="/scores" fontIcon="table_chart" class="icon"></mat-icon>
+      <mat-icon matTooltip="News" routerLink="/news" fontIcon="feed" class="icon"></mat-icon>
+      <mat-icon matTooltip="Login" *ngIf="!isAuthenticated" (click)="toLogin()" fontIcon="login" class="icon"></mat-icon>
+      <mat-icon matTooltip="Logout" *ngIf="isAuthenticated" (click)="logout()" fontIcon="logout" class="icon"></mat-icon>
+    </div>
+  </mat-toolbar>
