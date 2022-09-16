@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { User } from './user.model';
 
@@ -17,7 +17,7 @@ export interface authResponseData {
   providedIn: 'root'
 })
 export class AuthService {
-  user = new Subject<User>()
+  user = new BehaviorSubject<User | null>(null);
 
   constructor(private http: HttpClient) { }
 
@@ -43,6 +43,10 @@ export class AuthService {
         tap(resData => {
           this.handleAuthentication(resData.email, resData.localId, resData.idToken, +resData.expiresIn)
         }))
+  }
+
+  logout() {
+    this.user.next(null)
   }
 
   private handleAuthentication(email: string, id: string, token: string, expiresIn: number) {
