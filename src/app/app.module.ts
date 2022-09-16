@@ -9,7 +9,10 @@ import { FeedComponent } from './feed/feed.component';
 import { MaterialModule } from './material/material.module';
 import { AuthComponent } from './auth/auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SanitizeUrlPipe } from './sanitize-url.pipe';
+import { SanitizeUrlPipe } from './feed/sanitize-url.pipe';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { NewsComponent } from './news/news.component';
+import { ScoresComponent } from './scores/scores.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { SanitizeUrlPipe } from './sanitize-url.pipe';
     FeedComponent,
     AuthComponent,
     SanitizeUrlPipe,
+    ToolbarComponent,
+    NewsComponent,
+    ScoresComponent,
   ],
   imports: [
     BrowserModule,

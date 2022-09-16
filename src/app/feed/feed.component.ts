@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IHighlight } from '../highlight';
+import { IHighlight } from './highlight';
 import { HighlightService } from './highlight.service';
 
 @Component({
