@@ -2,16 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-path-not-found',
-  template: `<div class='container'><h1>404</h1>
-  <h2>Page Not Found</h2>
-  <p>The Page you are looking for doesn't exist or an other error occured</p></div>`,
-  styles: ['.container { display: flex; flex-direction: column; align-items: center }']
+  template: `<div class='container'>
+  <h1>404</h1>
+  <h2>we are sorry, but the page you requested was not found</h2>
+  </div>`,
+  styles: ['.container { display: flex; flex-direction: column; align-items: center; height: 100vh; justify-content: center; margin: 24px;}']
 })
-export class PathNotFoundComponent implements OnInit {
-
+export class PathNotFoundComponent {
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
