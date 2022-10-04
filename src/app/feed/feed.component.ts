@@ -27,8 +27,8 @@ export class FeedComponent implements OnInit {
   @HostListener("window:scroll", ["$event"])
   onWindowScroll() {
     let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
-    let max = document.documentElement.scrollHeight;
-    if (pos == max) {
+    let max = document.documentElement.scrollHeight - 10;
+    if (pos >= max) {
       this.offset = this.offset + 5;
     }
   }

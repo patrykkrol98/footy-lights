@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
@@ -10,6 +10,7 @@ import { AuthService } from '../auth/auth.service';
 })
 export class ToolbarComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
+  screenWidth = window.innerWidth;
   private userSubscription!: Subscription;
 
   constructor(private authService: AuthService, private router: Router) { }
@@ -28,9 +29,14 @@ export class ToolbarComponent implements OnInit, OnDestroy {
     this.router.navigate(['/auth'])
   }
 
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.screenWidth = window.innerWidth;
+  }
+
+  
   ngOnDestroy(): void {
     this.userSubscription.unsubscribe()
   }
-
 
 }

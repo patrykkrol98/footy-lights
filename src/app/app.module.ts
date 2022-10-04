@@ -2,36 +2,32 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
-import { FeedComponent } from './feed/feed.component';
 import { MaterialModule } from './material/material.module';
-import { AuthComponent } from './auth/auth.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { SanitizeUrlPipe } from './feed/sanitize-url.pipe';
+import { AuthModule } from './auth/auth.module';
+
+import { AppComponent } from './app.component';
+import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { NewsComponent } from './news/news.component';
-import { ScoresComponent } from './scores/scores.component';
+import { ScoresModule } from './scores/scores.module';
+import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PathNotFoundComponent,
-    FeedComponent,
-    AuthComponent,
-    SanitizeUrlPipe,
     ToolbarComponent,
-    NewsComponent,
-    ScoresComponent,
+    BottomNavbarComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    AuthModule,
+    ScoresModule
   ],
   providers: [],
   bootstrap: [AppComponent]

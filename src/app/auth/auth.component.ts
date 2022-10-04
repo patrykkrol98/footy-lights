@@ -48,7 +48,6 @@ export class AuthComponent implements OnInit {
 
       authObservable.subscribe({
         next: resData => {
-          console.log(resData)
           this.isLoading = false
           this.router.navigate(['/feed'])
         },
