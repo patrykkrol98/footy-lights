@@ -1,4 +1,4 @@
-# Footy-Lights
+# Footy-Lights ⚽🎥
 
 > Latest highlights of football matches 
 > The most important news from the world of sport
@@ -29,17 +29,17 @@ The project will keep growing and getting better
 
 ### Feed page with latest highlights
 
-![Example screenshot](./img/img1.png)
-![Example screenshot](./img/img2.png)
+![Example screenshot](./img/1.png)
+![Example screenshot](./img/2.png)
 
 ### News 
 
-![Example screenshot](./img/img3.png)
-![Example screenshot](./img/img4.png)
+![Example screenshot](./img/3.png)
+![Example screenshot](./img/4.png)
 
 ### Latest Result
 
-![Example screenshot](./img/img5.png)
+![Example screenshot](./img/5.png)
 
 ## Setup
 
