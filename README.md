@@ -1,27 +1,70 @@
-# FootyLights
+# Footy-Lights
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+> Latest highlights of football matches 
+> The most important news from the world of sport
+> Fixtures, Standings of TOP5 Europe Leagues
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Contact](#contact)
 
-## Code scaffolding
+## General Information
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+FootyLights is a place where we can check the most important news, latest highlights, results and upcoming matches. Everything in one place.
+The project will keep growing and getting better
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+* Using Angular Material Components
+* JWT Authentication
 
-## Running unit tests
+## Screenshots
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Feed page with latest highlights
 
-## Running end-to-end tests
+![Example screenshot](./img/img1.png)
+![Example screenshot](./img/img2.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### News 
 
-## Further help
+![Example screenshot](./img/img3.png)
+![Example screenshot](./img/img4.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Latest Result
+
+![Example screenshot](./img/img5.png)
+
+## Setup
+
+Run `npm install` to load all necessary dependencies.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Project Status
+
+Project is: _in progress_
+
+## Room for Improvement
+
+The next step in development is finish score, standings module
+
+Room for improvement:
+
+* some visual improvments
+
+To do:
+
+* User page with tags to sort and filtr all content for the specify user 
+
+## Contact
+
+Created by Patryk Król
+
+[Linkedin](https://www.linkedin.com/in/patryk-krol/) or 📧 : patrtyk.krol.98@gmail.com
