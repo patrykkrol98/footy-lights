@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
+  FOOTBALL_DATA_URL: 'https://api.football-data.org/v4',
+  HIGHLIGHT_URL: "https://www.scorebat.com/video-api/v3/feed",
   NEWS_API_KEY: '20edb05487af46fe82db8841fc438ef7',
+  HIGHLIGHT_TOKEN: "MjA4NThfMTY2NDk2MTQ0OV83NDUyYjhhMTg0ZjE2ZThiNWY5YTRjZWM2YTNlNmZjMTI4MjAyNTQ0"
 };
 
 /*

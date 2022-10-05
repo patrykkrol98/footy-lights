@@ -1,1 +1,57 @@
-<p>scores works!</p>
+<mat-drawer-container class="drawer-container" [hasBackdrop]="true" autosize>
+    <mat-drawer #drawer class="sidenav" mode="over">
+      <p>Auto-resizing sidenav</p>
+      <p>Auto-resizing sidenav</p>
+      <p>Auto-resizing sidenav</p>
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+      <div *ngFor="let match of matches$ | async">
+        <div class="container">
+          <!-- code here -->
+          <div class="match">
+            <div class="match-header">
+              <div class="match-status">{{match.status}}</div>
+              <div class="match-tournament"><img src='{{match.competition.emblem}}' />{{match.competition.name}}</div>
+            </div>
+            <div class="match-content">
+              <div class="column">
+                <div class="team team--home">
+                  <div class="team-logo">
+                    <img src="{{match.homeTeam.crest}}" />
+                  </div>
+                  <h2 class="team-name">{{match.homeTeam.name}}</h2>
+                </div>
+              </div>
+              <div class="column">
+                <div class="match-details">
+                  <div class="match-date">
+                    {{match.utcDate | date}} 
+                  </div>
+                  <div class="match-score">
+                    <span class="match-score-number match-score-number--leading">{{match.score.halfTime.home}}</span>
+                    <span class="match-score-divider">:</span>
+                    <span class="match-score-number">{{match.score.fullTime.away}}</span>
+                  </div>
+                  <div class="match-referee">
+                    Referee: {{match.referees[0]?.name || 'Uknown'}}
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="team team--away">
+                  <div class="team-logo">
+                    <img src="{{match.awayTeam.crest}}" />
+                  </div>
+                  <h2 class="team-name">{{match.awayTeam.name}}</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
