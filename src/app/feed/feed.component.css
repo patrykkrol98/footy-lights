@@ -47,7 +47,8 @@
 
 .card-image,
 .card-player {
-    width: 780px;
+    height: 400px;
+    width: 700px;
     -webkit-border-radius: 8px 8px 0 0;
     -moz-border-radius: 8px 8px 0 0;
     -ms-border-radius: 8px 8px 0 0;
@@ -60,6 +61,7 @@
     .card-image,
     .card-player {
         width: 100vw;
+        height: calc(width/1.8)px;
     }
 
     .mat-card {

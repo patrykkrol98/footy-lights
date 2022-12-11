@@ -9,18 +9,12 @@
           <span>Feed</span>
         </div>
       </button>
-      <button mat-button routerLink="/scores" routerLinkActive="active-link">
+      <!-- <button mat-button routerLink="/scores" routerLinkActive="active-link">
         <div class="col">
           <mat-icon fontIcon="table_chart"></mat-icon>
           <span>Scores</span>
         </div>
-      </button>
-      <button mat-button routerLink="/news" routerLinkActive="active-link">
-        <div class="col">
-          <mat-icon fontIcon="feed"></mat-icon>
-          <span>News</span>
-        </div>
-      </button>
+      </button> -->
       <button mat-button (click)="toLogin()" *ngIf="!isAuthenticated" routerLinkActive="active-link">
         <div class="col">
           <mat-icon fontIcon="login"></mat-icon>

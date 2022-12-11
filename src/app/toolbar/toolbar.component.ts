@@ -33,7 +33,6 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   onWindowResize() {
     this.screenWidth = window.innerWidth;
   }
-
   
   ngOnDestroy(): void {
     this.userSubscription.unsubscribe()
